@@ -2,7 +2,7 @@
 /*
 Plugin Name: kodam broker menu
 Description: Custom menu plugin with desktop/mobile assets.
-Version: 1.3
+Version: 1.3.1
 Author: <a href="mailto:yazdizadeharefeh@gmail.com">عارفه یزدی زاده</a>
 */
 
