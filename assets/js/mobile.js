@@ -120,6 +120,11 @@
         if (drawer.classList.contains('active')) return;
         window.clearTimeout(resetTimer);
         lastFocus = document.activeElement;
+        if (!drawer.classList.contains('is-ready')) {
+            // Enable the slide transition only now, so nothing animates on page load.
+            drawer.classList.add('is-ready');
+            void drawer.offsetWidth;
+        }
         drawer.classList.add('active');
         drawer.setAttribute('aria-hidden', 'false');
         if (hamburger) {

@@ -632,11 +632,6 @@ if (!defined('ABSPATH')) {
                 </div>
             </div>
             <!-- End blogs menu -->
-            <div class="dropdown-menu current-price menu-item">
-                <div class="mega-toggle dropdown-header" >
-                    <a class="link-page" href="https://kodambroker.com/current-price/" target="_blank">قیمت لحظه‌ای</a>
-                </div>
-            </div>
         </div>
     </div>
 </div>

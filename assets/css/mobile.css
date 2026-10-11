@@ -73,12 +73,18 @@
     color: var(--amb-text);
     transform: translate3d(100%, 0, 0);
     visibility: hidden;
-    transition: transform 0.35s var(--amb-ease), visibility 0s linear 0.35s;
     -webkit-tap-highlight-color: transparent;
+}
+/* Slide animation is enabled only after the first user open (is-ready, set in mobile.js),
+   so a late-loading stylesheet can never animate the drawer on page load. */
+.amb-m.is-ready {
+    transition: transform 0.35s var(--amb-ease), visibility 0s linear 0.35s;
 }
 .amb-m.active {
     transform: translate3d(0, 0, 0);
     visibility: visible;
+}
+.amb-m.is-ready.active {
     transition: transform 0.35s var(--amb-ease), visibility 0s;
 }
 .amb-m *,

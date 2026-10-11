@@ -150,6 +150,8 @@ $amb_panel_close = static function ($list = true) {
     echo $list ? '</ul></section>' : '</section>';
 };
 ?>
+<?php // Critical: keep the drawer off-screen from the first paint, even if mobile.css loads late/async. ?>
+<style>#mobileDrawer:not(.active){position:fixed;top:0;right:0;width:100%;visibility:hidden;transform:translate3d(100%,0,0)}</style>
 <div class="mobile-menu-drawer amb-m" id="mobileDrawer" aria-hidden="true" role="dialog" aria-modal="true" aria-label="منوی سایت">
     <div class="amb-m__bg" aria-hidden="true"></div>
     <header class="amb-m-header">
@@ -180,7 +182,6 @@ $amb_panel_close = static function ($list = true) {
                 cmb_m_nav_item('toolsPanel', 'ابزار و خدمات');
                 cmb_m_nav_item('quickPanel', 'انتخاب سریع');
                 cmb_m_nav_item('blogPanel', 'بلاگ');
-                cmb_m_link_item($amb_url('current-price/'), 'قیمت لحظه‌ای');
                 ?>
             </ul>
         </section>
