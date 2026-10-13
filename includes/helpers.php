@@ -49,13 +49,15 @@ function cmb_render_card_grid(array $query_args, array $opts = [])
             }
         }
         $title = get_post_meta(get_the_ID(), $opts['title_meta'], true);
+        // Logo alt = "لوگو" + short name, not the full review-article title.
+        $alt = 'لوگو ' . trim($title ? $title : get_the_title());
         ?>
-        <a class="cart-item" href="<?php the_permalink(); ?>">
+        <li class="cmb-contents"><a class="cart-item" href="<?php the_permalink(); ?>">
             <div class="image-logo-sec">
-                <img src="<?php echo esc_url($image); ?>" alt="<?php the_title_attribute(); ?>">
+                <img src="<?php echo esc_url($image); ?>" alt="<?php echo esc_attr($alt); ?>">
             </div>
             <p<?php echo $opts['title_class'] ? ' class="' . esc_attr($opts['title_class']) . '"' : ''; ?>><?php echo esc_html($title); ?></p>
-        </a>
+        </a></li>
         <?php
     endwhile;
 

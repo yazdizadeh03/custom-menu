@@ -455,3 +455,4 @@
     .amb-m-header__brand,
     .amb-m-header__back { transition-duration: 1ms !important; transition-delay: 0s !important; }
 }
+@media (max-width: 1024px) { .navbar { min-width: auto !important; } }

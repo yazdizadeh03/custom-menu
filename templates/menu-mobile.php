@@ -172,7 +172,7 @@ $amb_panel_close = static function ($list = true) {
             <svg width="24" height="24"><use href="#icon-close"></use></svg>
         </button>
     </header>
-    <div class="amb-m-viewport" data-amb-viewport>
+    <nav class="amb-m-viewport" data-amb-viewport aria-label="منوی اصلی">
 
         <!-- Main -->
         <section class="amb-m-panel amb-m-panel--main is-active" id="mobileMainPanel" data-amb-panel aria-label="منو">
@@ -249,7 +249,7 @@ $amb_panel_close = static function ($list = true) {
                 ?>
             <?php $amb_panel_close(); ?>
         <?php endforeach; ?>
-    </div>
+    </nav>
 
     <!-- Search: stays mounted, never re-rendered -->
     <?php if (cmb_option('show_search')) : ?>
