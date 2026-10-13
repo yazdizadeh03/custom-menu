@@ -6,6 +6,13 @@
     --kb-blue-50:#E4ECFF;
     --kb-blue-100:#BBCFFF;
 }
+/* SEO nav > ul > li structure: neutral lists, wrapper <li>s take no box so layout is unchanged.
+   Kept first so the component rules below still override padding/margins. */
+.cmb-list { list-style: none; margin: 0; padding: 0; }
+.cmb-list > li { margin: 0; padding: 0; }
+.cmb-list > li::before,
+.cmb-list > li::marker { content: none; }
+.cmb-list > .cmb-contents { display: contents; }
 .menu-active {
     background-color: #fff;
     position: fixed;
