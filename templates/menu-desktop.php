@@ -304,7 +304,7 @@ if (!defined('ABSPATH')) {
                                         </a></li>
                                     </ul>
                                     <div class="side-image">
-                                        <img  src="<?php echo CMB_URL . 'assets/image/quick-select-broker.webp'; ?>" width="320" height="312"/>
+                                        <img  src="<?php echo CMB_URL . 'assets/image/quick-select-broker.webp'; ?>" width="320" height="312" alt="انتخاب سریع بروکر فارکس"/>
                                     </div>
                                 </div>
                             </div>
@@ -355,7 +355,7 @@ if (!defined('ABSPATH')) {
                                         </a></li>
                                     </ul>
                                     <div class="side-image">
-                                        <img  src="<?php echo CMB_URL . 'assets/image/quick-select-exchange.webp'; ?>" width="320" height="312"/>
+                                        <img  src="<?php echo CMB_URL . 'assets/image/quick-select-exchange.webp'; ?>" width="320" height="312" alt="انتخاب سریع صرافی ارز دیجیتال"/>
                                     </div>
                                 </div> 
                             </div>
@@ -405,7 +405,7 @@ if (!defined('ABSPATH')) {
                                         </a></li>
                                     </ul>
                                     <div class="side-image">
-                                        <img  src="<?php echo CMB_URL . 'assets/image/quick-select-prop.webp'; ?>" width="320" height="312"/>
+                                        <img  src="<?php echo CMB_URL . 'assets/image/quick-select-prop.webp'; ?>" width="320" height="312" alt="انتخاب سریع پراپ فرم"/>
                                     </div>
                                 </div>
                             </div>
@@ -478,7 +478,7 @@ if (!defined('ABSPATH')) {
                                         </ul>
                                     </div>
                                     <div class="side-image">
-                                        <img  src="<?php echo CMB_URL . 'assets/image/bonus-forex.webp'; ?>" width="320" height="312"/>
+                                        <img  src="<?php echo CMB_URL . 'assets/image/bonus-forex.webp'; ?>" width="320" height="312" alt="بونوس بروکرهای فارکس"/>
                                     </div>
                                 </div>
                             </div>
@@ -509,7 +509,7 @@ if (!defined('ABSPATH')) {
                                         </ul>
                                     </div>
                                     <div class="side-image">
-                                        <img  src="<?php echo CMB_URL . 'assets/image/bonus-crypto.webp'; ?>" width="320" height="312"/>
+                                        <img  src="<?php echo CMB_URL . 'assets/image/bonus-crypto.webp'; ?>" width="320" height="312" alt="بونوس صرافی‌های ارز دیجیتال"/>
                                     </div>
                                 </div>
                             </div> 
@@ -538,7 +538,7 @@ if (!defined('ABSPATH')) {
                                         </ul>
                                     </div>
                                     <div class="side-image">
-                                        <img  src="<?php echo CMB_URL . 'assets/image/discount-prop.webp'; ?>" width="320" height="312"/>
+                                        <img  src="<?php echo CMB_URL . 'assets/image/discount-prop.webp'; ?>" width="320" height="312" alt="کد تخفیف پراپ فرم‌ها"/>
                                     </div>
                                 </div>   
                             </div>
@@ -569,7 +569,7 @@ if (!defined('ABSPATH')) {
                                         </ul>
                                     </div>
                                     <div class="side-image">
-                                        <img  src="<?php echo CMB_URL . 'assets/image/rebate.webp'; ?>" width="320" height="312"/>
+                                        <img  src="<?php echo CMB_URL . 'assets/image/rebate.webp'; ?>" width="320" height="312" alt="ریبیت بروکرهای فارکس"/>
                                     </div>
                                 </div>
                             </div>    
@@ -590,7 +590,7 @@ if (!defined('ABSPATH')) {
                                         <li class="cmb-contents"><a class="cart-item-link" href="https://kodambroker.com/calculators/margin-calculator/" target="_blank"><svg width="6" height="6"><use href="#icon-cricle"></use></svg>ماشین حساب مارجین</a></li>
                                     </ul>
                                     <div class="side-image">
-                                        <img  src="<?php echo CMB_URL . 'assets/image/calculator.webp'; ?>" width="320" height="312"/>
+                                        <img  src="<?php echo CMB_URL . 'assets/image/calculator.webp'; ?>" width="320" height="312" alt="ماشین حساب‌های فارکس"/>
                                     </div>
                                 </div>
                             </div>
@@ -608,7 +608,7 @@ if (!defined('ABSPATH')) {
                                         <li class="cmb-contents"><a class="cart-item-link" href="https://kodambroker.com/indicator/" target="_blank"><svg width="6" height="6"><use href="#icon-cricle"></use></svg>همه اندیکاتورها</a></li>
                                     </ul>
                                     <div class="side-image">
-                                        <img  src="<?php echo CMB_URL . 'assets/image/indicator.webp'; ?>" width="320" height="312"/>
+                                        <img  src="<?php echo CMB_URL . 'assets/image/indicator.webp'; ?>" width="320" height="312" alt="اندیکاتورهای متاتریدر و تریدینگ ویو"/>
                                     </div>
                                 </div>
                             </div>
