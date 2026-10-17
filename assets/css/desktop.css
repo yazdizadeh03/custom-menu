@@ -623,11 +623,6 @@
     border-bottom: 1px solid #EEEEEE;
     margin-bottom: 18px;
 }
-#tab-calculator .spcontent-section , #tab-indicator .spcontent-section {
-    border-bottom: none;
-    padding-bottom:unset;
-    margin-bottom:unset;
-}
 .topic-edu-sec li::marker {
     color: #FFA825;
 }
