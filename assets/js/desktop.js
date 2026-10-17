@@ -64,29 +64,48 @@ document.querySelectorAll('.has-mega, .submenu').forEach(megaItem => {
     });
 });
 
-document.querySelectorAll('.title-sidebar-tab .tab-item').forEach(tab => {
-    tab.addEventListener('click', function () {
+// Sidebar tabs: switch on mouse hover (with a short intent delay so a diagonal
+// move toward the content doesn't flip tabs), and on click for touch/pen.
+// One delegated listener per dropdown; only the previous/next tab is touched.
+document.querySelectorAll('.dropdown-content').forEach(scope => {
+    if (!scope.querySelector('.title-sidebar-tab .tab-item[data-target]')) return;
 
-        // نزدیک‌ترین زیرمنویی که این تب داخلشه
-        const scope = tab.closest('.dropdown-content');
-        if (!scope) return;
+    const HOVER_DELAY = 90;
+    let activeTab = scope.querySelector('.title-sidebar-tab .tab-item.active');
+    let activeContent = scope.querySelector('.tab-content.active');
+    let timer = 0;
 
-        // فقط تب‌های داخل همین زیرمنو
-        scope.querySelectorAll('.tab-item').forEach(item =>
-            item.classList.remove('active')
-        );
-
+    const activate = tab => {
+        if (tab === activeTab) return;
+        const targetEl = scope.querySelector(`#${tab.dataset.target}`);
+        if (!targetEl) return;
+        if (activeTab) activeTab.classList.remove('active');
+        if (activeContent) activeContent.classList.remove('active');
         tab.classList.add('active');
+        targetEl.classList.add('active');
+        activeTab = tab;
+        activeContent = targetEl;
+    };
 
-        // فقط محتوای تب‌های همین زیرمنو
-        scope.querySelectorAll('.tab-content').forEach(content =>
-            content.classList.remove('active')
-        );
+    const tabFrom = e => {
+        const tab = e.target.closest('.tab-item[data-target]');
+        return tab && scope.contains(tab) && tab.closest('.title-sidebar-tab') ? tab : null;
+    };
 
-        const target = tab.getAttribute('data-target');
-        const targetEl = scope.querySelector(`#${target}`);
-        if (targetEl) {
-            targetEl.classList.add('active');
+    scope.addEventListener('pointerover', e => {
+        if (e.pointerType !== 'mouse') return;
+        const tab = tabFrom(e);
+        clearTimeout(timer);
+        if (tab && tab !== activeTab) timer = setTimeout(activate, HOVER_DELAY, tab);
+    });
+
+    scope.addEventListener('pointerleave', () => clearTimeout(timer));
+
+    scope.addEventListener('click', e => {
+        const tab = tabFrom(e);
+        if (tab) {
+            clearTimeout(timer);
+            activate(tab);
         }
     });
 });
